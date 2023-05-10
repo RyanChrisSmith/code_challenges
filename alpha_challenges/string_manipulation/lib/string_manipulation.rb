@@ -14,6 +14,6 @@ class StringManipulation
   end
 
   def replace_various_elements
-    result = string.gsub(' ', '_').gsub('\n', '*').gsub('Sam', 'Ryan').gsub('o', '0').gsub('green', 'blue')
+    string.gsub(' ', '_').gsub('\n', '*').gsub('Sam', 'Ryan').gsub('o', '0').gsub('green', 'blue')
   end
 end
