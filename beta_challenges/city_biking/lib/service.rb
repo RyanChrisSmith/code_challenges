@@ -1,5 +1,4 @@
 require 'httparty'
-
 # Write a script that does the following when you run the file (`ruby city_biking.rb` from the terminal):
 
 # Using HTTParty, make a GET request to the NYC citibike API (https://feeds.citibikenyc.com/stations/stations.json)
@@ -13,3 +12,10 @@ require 'httparty'
 # E 47 St & 2 Ave (22 bikes available)
 # W 18 St & 6 Ave (16 bikes available)
 # Broadway & W 49 St (4 bikes available)
+
+class Service
+  def get_all_stations
+    response = HTTParty.get('https://feeds.citibikenyc.com/stations/stations.json')
+    final = JSON.parse(response.body, symbolize_names: true)
+  end
+end
